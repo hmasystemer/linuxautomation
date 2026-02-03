@@ -18,8 +18,8 @@
     - name: Enable and start ntp service (Ubuntu)
       service:
         name: ntp
-        state: stopped
-        enabled: no
+        state: started
+        enabled: yes
       when: ansible_facts['distribution'] == 'Ubuntu'
 
     - name: Enable and start chronyd service (RHEL)
